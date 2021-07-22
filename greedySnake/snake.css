@@ -1,0 +1,25 @@
+#restart{
+    font-size: 20px;
+    color: teal;
+    background: wheat;
+    width: 200px;
+    height: 50px;
+}
+#button{
+    text-align: center;
+}
+#backGround{
+    background: royalblue;
+    width: 640px;
+    height: 640px;
+    padding: 5px;
+    margin: 100px auto;
+    position: relative;
+}
+.block{
+    width: 32px;
+    height: 32px;
+    background: black;
+    margin: 0;
+    position: absolute;
+}
