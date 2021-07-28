@@ -17,6 +17,7 @@ button.game{
     font-size: 40px;
     width: 300px;
     color: gray;
+    background-color: rgb(231, 231, 231);
 }
 #author{
     font-size: 20px;

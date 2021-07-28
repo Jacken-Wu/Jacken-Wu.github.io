@@ -7,6 +7,9 @@
 }
 #button{
     text-align: center;
+    margin: -50px auto;
+    width: 640px;
+    position: relative;
 }
 #backGround{
     background: royalblue;
@@ -22,4 +25,19 @@
     background: black;
     margin: 0;
     position: absolute;
+}
+#re{
+    left: 100px;
+    position: absolute;
+}
+#direction{
+    left: 400px;
+    top: -10px;
+    line-height: 35px;
+    position: absolute;
+}
+#direction button{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
 }

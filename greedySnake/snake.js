@@ -48,8 +48,8 @@ window.onload = function(){
         div.style.background = "yellow";
     };
 
-    var button = document.getElementById("restart");  //restart按钮，重新初始化
-    button.onclick = function(){
+    var restart = document.getElementById("restart");  //restart按钮，重新初始化
+    restart.onclick = function(){
         div = document.getElementsByClassName("block");
         for(var i=0; i<div.length; i++)
             div[i].style.background = "black";
@@ -110,6 +110,7 @@ window.onload = function(){
         };
         
         document.onkeydown = function(){
+            event.preventDefault();
             if(!(snake[0][0] > 19 || snake[0][1] > 19 || snake[0][0] < 0 || snake[0][1] < 0 || eatSelf))
                 switch(event.keyCode)
                 {
@@ -130,6 +131,27 @@ window.onload = function(){
                             direction2 = 4;
                         break;
                 };
+        };
+            
+        var left = document.getElementById("left");
+        var up = document.getElementById("up");
+        var right = document.getElementById("right");
+        var down = document.getElementById("down");
+        left.onclick = function(){
+            if(direction != 3)
+                direction2 = 1;
+        };
+        up.onclick = function(){
+            if(direction != 4)
+                direction2 = 2;
+        };
+        right.onclick = function(){
+            if(direction != 1)
+                direction2 = 3;
+        };
+        down.onclick = function(){
+            if(direction != 2)
+                direction2 = 4;
         };
     }, 500);
 };
