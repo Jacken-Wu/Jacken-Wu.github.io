@@ -1,0 +1,54 @@
+#background{
+    width: 480px;
+    height: 800px;
+    background-color: yellow;
+    padding: 5px;
+    margin: 50px auto;
+    position: relative;
+}
+.block{
+    width: 32px;
+    height: 32px;
+    background-color: black;
+    position: absolute;
+}
+#button{
+    width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+#re{
+    left: 50px;
+    position: absolute;
+}
+#restart{
+    width: 150px;
+    height: 40px;
+    font-size: 25px;
+    background-color: rgb(255, 204, 110);
+}
+#control{
+    top: -10px;
+    left: 220px;
+    position: absolute;
+}
+.buttons{
+    width: 65px;
+    height: 65px;
+}
+#left{
+    background-image: url(./img/button_left.gif);
+}
+#down{
+    background-image: url(./img/button_down.gif);
+}
+#right{
+    background-image: url(./img/button_right.gif);
+}
+#leftMove{
+    background-color: blanchedalmond;
+}
+#rightMove{
+    background-color: blanchedalmond;
+}

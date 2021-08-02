@@ -1,0 +1,27 @@
+#pages{
+    height: 30px;
+    padding: 5px;
+    background-color: black;
+    margin: 50px auto;
+}
+.page{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    color: black;
+    background-color: rgb(233, 233, 233);
+}
+#text{
+    width: 700px;
+    height: auto;
+    background-color: rgb(240, 211, 174);
+    margin: 100px auto;
+}
+#text h1{
+    font-size: 30px;
+    text-align: center;
+}
+#text p{
+    font-size: 25px;
+    white-space: pre-wrap;
+}
