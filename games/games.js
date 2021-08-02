@@ -5,6 +5,6 @@ window.onload = function(){
         location.href = "./snake/snake.html";
     };
     author.onclick = function(){
-        location.href = "https://github.com/Jacken-Wu/Jacken-Wu.github.io/games";
+        location.href = "https://github.com/Jacken-Wu/Jacken-Wu.github.io/tree/main/games";
     };
 };
