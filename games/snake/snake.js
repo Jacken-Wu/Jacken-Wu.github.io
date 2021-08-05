@@ -64,7 +64,7 @@ window.onload = function(){
             div.style.background = "yellow";
         };
     };
-
+    
     var eatSelf = false;
     setInterval(function(){
         direction = direction2;
@@ -132,26 +132,31 @@ window.onload = function(){
                         break;
                 };
         };
-            
-        var left = document.getElementById("left");
-        var up = document.getElementById("up");
-        var right = document.getElementById("right");
-        var down = document.getElementById("down");
-        left.onclick = function(){
-            if(direction != 3)
-                direction2 = 1;
-        };
-        up.onclick = function(){
-            if(direction != 4)
-                direction2 = 2;
-        };
-        right.onclick = function(){
-            if(direction != 1)
-                direction2 = 3;
-        };
-        down.onclick = function(){
-            if(direction != 2)
-                direction2 = 4;
-        };
     }, 500);
+    
+    var left = document.getElementById("left");
+    var up = document.getElementById("up");
+    var right = document.getElementById("right");
+    var down = document.getElementById("down");
+    left.onclick = function(){
+        if(direction != 3)
+            direction2 = 1;
+    };
+    up.onclick = function(){
+        if(direction != 4)
+            direction2 = 2;
+    };
+    right.onclick = function(){
+        if(direction != 1)
+            direction2 = 3;
+    };
+    down.onclick = function(){
+        if(direction != 2)
+            direction2 = 4;
+    };
+    
+    var back = document.getElementById("backButton");
+    back.onclick = function(){
+        location.href = "../index.html";
+    };
 };

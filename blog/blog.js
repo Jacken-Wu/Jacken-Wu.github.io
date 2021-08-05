@@ -25,6 +25,7 @@ window.onload = function(){
     pages.appendChild(blogButton);
 
     var pageNow = 1;
+    var pageNum = document.getElementById("pageNum");
     var blog = new XMLHttpRequest();
     blog.open("Get", "./blogs/"+pageNow+".txt", false);
     blog.send(null);
@@ -40,8 +41,9 @@ window.onload = function(){
         blogText.innerText = "\t"+text[i];
         backgroud.appendChild(blogText);
     };
+    pageNum.innerText = "第" + pageNow + "页";
 
-    buttons = document.getElementsByTagName("button");
+    buttons = document.getElementById("pages").getElementsByTagName("button");
     var buttonDown = function(page){
         pageNow = parseInt(page);
         var blogTexts = document.getElementById("text").getElementsByTagName("p");
@@ -59,6 +61,7 @@ window.onload = function(){
             blogText.innerText = "\t"+text[i];
             backgroud.appendChild(blogText);
         };
+        pageNum.innerText = "第" + page + "页";
     };
     for(var i=1; i<blogListLenght+1; i++)  // 每一页的按钮
         buttons[i].onclick = function(){
@@ -71,5 +74,10 @@ window.onload = function(){
     buttons[buttons.length-1].onclick = function(){  // 向右翻页
         if(pageNow < blogListLenght)
             buttonDown(pageNow+1);
+    };
+
+    var back = document.getElementById("backButton");
+    back.onclick = function(){
+        location.href = "../index.html";
     };
 };

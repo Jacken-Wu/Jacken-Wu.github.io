@@ -1,3 +1,11 @@
+#backButton{
+    width: 70px;
+    height: 25px;
+    font-size: 20px;
+    background-color: rgb(233, 233, 233);
+    top: 5px;
+    position: absolute;
+}
 h1{
     font-size: 70px;
     text-align: center;

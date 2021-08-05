@@ -7,7 +7,7 @@ h1{
     font-size: 50px;
 }
 #buttons{
-    width: 500px;
+    width: 700px;
     height: 200px;
     margin: 0 auto;
     text-align: center;
@@ -28,19 +28,19 @@ h1{
     width: 200px;
     height: 30px;
     top: 130px;
-    right: 50px;
+    right: 150px;
     color: rgb(226, 226, 226);
     background-color: rgb(107, 103, 96);
     position: absolute;
 }
 #padding{
-    width: 80%;
+    width: 90%;
     padding: 5px;
     margin: 0 auto;
     background-color: rgb(255, 240, 210);
 }
 #lastBlog{
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: 0 auto;
 }
