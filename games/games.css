@@ -29,7 +29,7 @@ button.game{
     background-color: rgb(233, 233, 233);
 }
 #tetris{
-    font-size: 30px;
+    font-size: 25px;
     top: 5px;
     position: relative;
 }
