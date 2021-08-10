@@ -184,6 +184,7 @@ window.onload = function () {
         rightDown();
     };
     downFaster.onmousedown = function () {
+        count = 11;
         mouseDown = setInterval(function () {
             count = 11;
         }, 100);
