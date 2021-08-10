@@ -13,7 +13,7 @@ window.onload = function(){
     };
 
     var blog = new XMLHttpRequest();
-    blog.open("Get", "./blog/blogs/3.txt", false);
+    blog.open("Get", "./blog/blogs/5.txt", false);
     blog.send(null);
     var text = blog.responseText.split("\n");
 
