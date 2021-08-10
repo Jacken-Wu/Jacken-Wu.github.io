@@ -138,19 +138,19 @@ window.onload = function(){
     var up = document.getElementById("up");
     var right = document.getElementById("right");
     var down = document.getElementById("down");
-    left.onclick = function(){
+    left.onmousedown = function(){
         if(direction != 3)
             direction2 = 1;
     };
-    up.onclick = function(){
+    up.onmousedown = function(){
         if(direction != 4)
             direction2 = 2;
     };
-    right.onclick = function(){
+    right.onmousedown = function(){
         if(direction != 1)
             direction2 = 3;
     };
-    down.onclick = function(){
+    down.onmousedown = function(){
         if(direction != 2)
             direction2 = 4;
     };

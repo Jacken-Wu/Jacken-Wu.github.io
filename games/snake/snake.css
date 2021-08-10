@@ -24,7 +24,7 @@
     width: 640px;
     height: 640px;
     padding: 5px;
-    margin: 100px auto;
+    margin: 35px auto;
     position: relative;
 }
 .block{
@@ -35,13 +35,13 @@
 }
 #re{
     left: 50px;
-    top: 65px;
+    top: 95px;
     position: absolute;
 }
 #direction{
     width: 400px;
     left: 250px;
-    top: -10px;
+    top: 20px;
     line-height: 65px;
     position: absolute;
 }

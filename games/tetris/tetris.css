@@ -11,7 +11,7 @@
     height: 480px;
     background-color: blue;
     padding: 5px;
-    margin: 0 auto;
+    margin: 35px auto;
     position: relative;
 }
 #line{
@@ -34,7 +34,7 @@
     top: -5px;
     background-color: rgb(190, 190, 190);
     padding: 5px;
-    margin: 0 auto;
+    margin: -35px auto;
     position: relative;
 }
 #middlePart{
