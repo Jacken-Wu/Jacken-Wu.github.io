@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tetris</title>
+    <title>Tetris</title>
     <link rel="stylesheet" href="./tetris.css">
     <script src="./tetris.js"></script>
 </head>
 <body>
-    <div id="background"></div>
+    <button id="back">back</button>
+    <div id="background">
+        <div id="line"></div>
+    </div>
     <div id="button">
-        <div id="re">
+        <div id="middlePart">
             <button id="restart">restart</button>
         </div>
-        <div id="control">
-            <!-- left逆时针, right顺时针, down快速降下 -->
-            <button id="left" class="buttons"></button>
-            <button id="down" class="buttons"></button>
-            <button id="right" class="buttons"></button>
+        <div id="leftPart">
+            <p id="score">scroe: 0</p>
+            <button id="down">down(space)</button>
+        </div>
+        <div id="rightPart">
+            <button id="turn">↑</button>
             <br>
-            <button id="leftMove" class="buttons">←</button>
-            <button id="rightMove" class="buttons">→</button>
+            <button id="left">←</button>
+            <button id="right">→</button>
+            <br>
+            <button id="downFaster">↓</button>
         </div>
     </div>
 </body>

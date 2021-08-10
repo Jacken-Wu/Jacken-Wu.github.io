@@ -1,54 +1,99 @@
+#back{
+    width: 70px;
+    height: 25px;
+    font-size: 20px;
+    top: 5px;
+    background-color: rgb(233, 233, 233);
+    position: absolute;
+}
 #background{
-    width: 480px;
-    height: 800px;
-    background-color: yellow;
+    width: 300px;
+    height: 480px;
+    background-color: blue;
     padding: 5px;
-    margin: 50px auto;
+    margin: 0 auto;
     position: relative;
 }
+#line{
+    width: 300px;
+    height: 2px;
+    top: 64px;
+    z-index: 200;
+    background-color: red;
+    position: absolute;
+}
 .block{
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     background-color: black;
     position: absolute;
 }
 #button{
-    width: 480px;
+    width: 300px;
+    height: 0;
+    top: -5px;
+    background-color: rgb(190, 190, 190);
+    padding: 5px;
     margin: 0 auto;
-    text-align: center;
     position: relative;
 }
-#re{
-    left: 50px;
+#middlePart{
+    width: 300px;
+    height: 80px;
+    background-color: rgb(255, 202, 133);
+    margin: 0 auto;
     position: absolute;
+    text-align: center;
 }
 #restart{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 15px;
+    position: relative;
+    top: 10px;
+    background-color: rgb(233, 233, 233);
+}
+#leftPart{
     width: 150px;
-    height: 40px;
-    font-size: 25px;
-    background-color: rgb(255, 204, 110);
-}
-#control{
-    top: -10px;
-    left: 220px;
+    height: 120px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: rgb(255, 202, 133);
+    left: -40px;
     position: absolute;
+    text-align: center;
 }
-.buttons{
-    width: 65px;
-    height: 65px;
+#rightPart{
+    width: 150px;
+    height: 120px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: rgb(255, 202, 133);
+    right: -40px;
+    position: absolute;
+    text-align: center;
 }
-#left{
-    background-image: url(./img/button_left.gif);
+#score{
+    font-size: 20px;
 }
 #down{
-    background-image: url(./img/button_down.gif);
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    background-color: rgb(233, 233, 233);
+}
+#rightPart button{
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    background-color: rgb(233, 233, 233);
+}
+#left{
+    right: 18px;
+    position: relative;
 }
 #right{
-    background-image: url(./img/button_right.gif);
-}
-#leftMove{
-    background-color: blanchedalmond;
-}
-#rightMove{
-    background-color: blanchedalmond;
+    left: 18px;
+    position: relative;
 }

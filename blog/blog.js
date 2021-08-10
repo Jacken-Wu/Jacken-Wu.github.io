@@ -1,5 +1,5 @@
 window.onload = function(){
-    var blogListLenght = 3;  // txt文件的个数
+    var blogListLenght = 5;  // txt文件的个数
     var pages = document.getElementById("pages");
     pages.style.width = 30*(blogListLenght+2) + "px";
 
