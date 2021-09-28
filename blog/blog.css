@@ -1,17 +1,9 @@
-#backButton{
-    width: 70px;
-    height: 25px;
-    font-size: 20px;
-    background-color: rgb(233, 233, 233);
-    top: 5px;
-    position: absolute;
-}
 #text{
     width: 700px;
     height: auto;
     padding: 10px;
     background-color: rgb(240, 211, 174);
-    background-image: url(./backImage.gif);
+    border-radius: 30px;
     margin: 100px auto;
 }
 #text h1{
@@ -23,9 +15,10 @@
     white-space: pre-wrap;
 }
 #backBlock{
-    width: 700px;
+    width: 100%;
     height: auto;
-    margin: 0 auto;
+    position: fixed;
+    bottom: 50px;
 }
 #pageNum{
     width: 80px;
@@ -34,11 +27,13 @@
     text-align: center;
     background-color: rgb(233, 233, 233);
     margin: -30px auto;
+    border-radius: 10px;
 }
 #pages{
     height: 30px;
     padding: 5px;
-    background-color: black;
+    background-color: rgb(255, 242, 224);
+    border-radius: 30px;
     margin: 50px auto;
 }
 .page{
@@ -46,5 +41,6 @@
     width: 30px;
     height: 30px;
     color: black;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(125, 154, 248);
+    border-radius: 30px;
 }

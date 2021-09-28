@@ -1,19 +1,17 @@
-h1{
-    font-size: 70px;
+#tittle{
+    width: 500px;
+    margin: auto;
     text-align: center;
 }
-#title{
-    width: 300px;
-    margin: 35px auto;
+h1{
+    font-size: 60px;
 }
 .buttons{
     width: 300px;
-    height: 153px;
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
-    position: relative;
 }
-.buttons > div{
+.buttons *{
     font-size: 30px;
     width: 300px;
     height: 60px;
@@ -21,7 +19,6 @@ h1{
     border-radius: 30px;
     color: white;
     background-color: rgb(183, 197, 243);
-    margin: auto;
     user-select: none;
 }
 .buttons *:hover{
@@ -32,11 +29,8 @@ h1{
     color: rgb(211, 211, 211);
     background-color: rgb(147, 162, 214);
 }
-#tetris{
-    top: 5px;
-    position: relative;
-}
 #github{
-    top: 10px;
+    margin: auto;
+    top: 5px;
     left: 50px;
 }

@@ -154,9 +154,4 @@ window.onload = function(){
         if(direction != 2)
             direction2 = 4;
     };
-    
-    var back = document.getElementById("backButton");
-    back.onclick = function(){
-        location.href = "../index.html";
-    };
 };

@@ -1,17 +1,14 @@
-#backButton{
-    width: 70px;
-    height: 25px;
-    font-size: 20px;
-    background-color: rgb(233, 233, 233);
-    top: 5px;
-    position: absolute;
-}
 #restart{
     font-size: 25px;
     color: teal;
-    background: wheat;
+    background-color: wheat;
     width: 200px;
     height: 50px;
+    border-radius: 10px;
+}
+#restart:active{
+    color: rgb(0, 99, 99);
+    background-color: rgb(202, 180, 139);
 }
 #button{
     text-align: center;
@@ -45,9 +42,14 @@
     line-height: 65px;
     position: absolute;
 }
-#direction button{
+#direction > button{
     font-size: 80px;
     width: 100px;
     height: 100px;
+    line-height: 100px;
     background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+}
+#direction > button:active{
+    background-color: rgb(206, 206, 206);
 }

@@ -8,7 +8,7 @@ h1{
 }
 #buttons{
     width: 700px;
-    height: 200px;
+    height: 240px;
     margin: 0 auto;
     text-align: center;
     position: relative;
@@ -17,27 +17,39 @@ h1{
     font-size: 35px;
     width: 400px;
     height: 60px;
-    background-color: rgb(243, 219, 183);
+    line-height: 60px;
+    border-radius: 30px;
+    color: white;
+    background-color: rgb(183, 197, 243);
+    margin: auto;
+    user-select: none;
+}
+#buttons *:hover{
+    color: rgb(240, 240, 240);
+    background-color: rgb(165, 179, 230);
+}
+#buttons *:active{
+    color: rgb(211, 211, 211);
+    background-color: rgb(147, 162, 214);
 }
 #blogs{
     top: 5px;
     position: relative;
 }
+#code{
+    top: 10px;
+    position: relative;
+}
 #github{
-    font-size: 20px;
-    width: 200px;
-    height: 30px;
-    top: 130px;
-    right: 150px;
-    color: rgb(226, 226, 226);
-    background-color: rgb(107, 103, 96);
-    position: absolute;
+    top: 15px;
+    left: 100px;
 }
 #padding{
     width: 90%;
     padding: 5px;
     margin: 0 auto;
     background-color: rgb(255, 240, 210);
+    border-radius: 30px;
 }
 #lastBlog{
     width: 90%;

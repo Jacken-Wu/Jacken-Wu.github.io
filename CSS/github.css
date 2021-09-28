@@ -1,0 +1,20 @@
+#github{
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
+    text-align: center;
+    color: rgb(226, 226, 226);
+    background-color: rgb(107, 103, 96);
+    position: relative;
+    user-select: none;
+}
+#github:hover{
+    color: rgb(212, 212, 212);
+    background-color: rgb(95, 89, 80);
+}
+#github:active{
+    color: rgb(168, 168, 168);
+    background-color: rgb(80, 74, 65);
+}

@@ -1,0 +1,56 @@
+body{
+    background-color: rgb(220, 220, 220);
+}
+#nav{
+    width: 240px;
+    height: 26px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 40px;
+    margin: auto;
+    z-index: 1;
+    text-align: center;
+    position: absolute;
+}
+#nav > input[type="radio"]{
+    width: 0;
+}
+.nav-item{
+    font-size: 20px;
+}
+#tracker{
+    background-color: rgb(127, 98, 255);
+    border-radius: 40px;
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    z-index: -1;
+    transition: .3s;
+}
+#nav-item-1:checked ~ #tracker{
+    width: 80px;
+    left: 3x;
+}
+#nav-item-2:checked ~ #tracker{
+    width: 55px;
+    left: 80px;
+}
+#nav-item-3:checked ~ #tracker{
+    width: 112px;
+    left: 135px;
+}
+#back{
+    width: 240px;
+    margin: auto;
+    top: 45%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+#github{
+    top: 70px;
+    margin: auto;
+}

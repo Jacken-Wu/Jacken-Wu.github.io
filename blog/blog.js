@@ -1,5 +1,5 @@
 window.onload = function(){
-    var blogListLenght = 6;  // txt文件的个数
+    var blogListLenght = 7;  // txt文件的个数
     var pages = document.getElementById("pages");
     pages.style.width = 30*(blogListLenght+2) + "px";
 
@@ -74,10 +74,5 @@ window.onload = function(){
     buttons[buttons.length-1].onclick = function(){  // 向右翻页
         if(pageNow < blogListLenght)
             buttonDown(pageNow+1);
-    };
-
-    var back = document.getElementById("backButton");
-    back.onclick = function(){
-        location.href = "../index.html";
     };
 };

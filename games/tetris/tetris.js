@@ -1,9 +1,4 @@
 window.onload = function () {
-    var back = document.getElementById("back");
-    back.onclick = function () {
-        location.href = "../index.html";
-    };
-
     var background = document.getElementById("background");
     for (var j = 0; j < 10; j++)  // 10列
         for (var i = 0; i < 17; i++) {  // 16行 + 最底端不显示的1行
