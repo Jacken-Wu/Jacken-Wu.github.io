@@ -1,78 +1,45 @@
-window.onload = function(){
-    var blogListLenght = 7;  // txt文件的个数
-    var pages = document.getElementById("pages");
-    pages.style.width = 30*(blogListLenght+2) + "px";
+window.onload = function () {
+    var maxPage = 7;  // 最大页数
+    var nowPage = location.href.split("=")[1] ? parseInt(location.href.split("=")[1]) : 1;  // 当前页数
 
-    var blogButton = document.createElement("button");  // 向左翻页
-    blogButton.className = "page";
-    blogButton.id = "left";
-    blogButton.innerText = "<";
-    pages.appendChild(blogButton);
-
-    for(var i=1; i<=blogListLenght; i++)
-    {
-        var blogButton = document.createElement("button");
-        blogButton.className = "page";
-        blogButton.id = i.toString();
-        blogButton.innerText = i.toString();
-        pages.appendChild(blogButton);
-    };
-
-    var blogButton = document.createElement("button");  // 向右翻页
-    blogButton.className = "page";
-    blogButton.id = "right";
-    blogButton.innerText = ">";
-    pages.appendChild(blogButton);
-
-    var pageNow = 1;
-    var pageNum = document.getElementById("pageNum");
+    // 博客内容
     var blog = new XMLHttpRequest();
-    blog.open("Get", "./blogs/"+pageNow+".txt", false);
+    blog.open("Get", "./blogs/"+nowPage+".txt", false);
     blog.send(null);
-    var text = blog.responseText.split("\n");
+    var text = blog.responseText.split("\n")
+    var textinner = "<h1>"+text[0]+"</h1>";
+    for (var i = 1; i < text.length; i++) {
+        textinner += "<p>\t"+text[i]+"</p>";
+    };
+    document.getElementById("text").innerHTML = textinner;
 
-    var backgroud = document.getElementById("text")
-    var blogTittle = document.createElement("h1");
-    blogTittle.innerText = text[0];
-    backgroud.appendChild(blogTittle);
-    for(var i=1; i<text.length; i++)
-    {
-        var blogText = document.createElement("p");
-        blogText.innerText = "\t"+text[i];
-        backgroud.appendChild(blogText);
+    // 分页
+    var lastPage = nowPage-1>1 ? nowPage-1 : 1;  // 上一页
+    var nextPage = nowPage+1<maxPage ? nowPage+1 : maxPage;  // 下一页
+    var pagesInner = "<div class='page' onclick='location.href=\"./blog.html?page="+lastPage+"\"'><</div>";
+    var isNull = true;  // 是否可以添加省略号
+    var width = 2;  // 记录分页栏的长度
+    for (var pageNum = 1; pageNum <= maxPage; pageNum++) {
+        if (pageNum <= 3 || pageNum >= nowPage-2 && pageNum <= nowPage+2 || pageNum >= maxPage-2) {
+            if (pageNum == nowPage) {
+                pagesInner += "<div id='now' class='page' onclick='location.href=\"./blog.html?page="+pageNum+"\"'>"+pageNum+"</div>";
+            }else{
+                pagesInner += "<div class='page' onclick='location.href=\"./blog.html?page="+pageNum+"\"'>"+pageNum+"</div>";
+            };
+            isNull = true;
+            width++;
+        }else{
+            if (isNull) {
+                pagesInner += "<div class='null'>...</div>";
+                isNull = false;
+                width++;
+            };
+        };
     };
-    pageNum.innerText = "第" + pageNow + "页";
+    pagesInner += "<div class='page' onclick='location.href=\"./blog.html?page="+nextPage+"\"'>></div>";
+    document.getElementById("pages").innerHTML = pagesInner;
+    document.getElementById("pages").style.width = 30*width+"px";
 
-    buttons = document.getElementById("pages").getElementsByTagName("button");
-    var buttonDown = function(page){
-        pageNow = parseInt(page);
-        var blogTexts = document.getElementById("text").getElementsByTagName("p");
-        for(var j=blogTexts.length-1; j>=0; j--)
-            backgroud.removeChild(blogTexts[j]);
-        
-        var blog = new XMLHttpRequest();
-        blog.open("Get", "./blogs/"+page+".txt", false);
-        blog.send(null);
-        var text = blog.responseText.split("\n");
-        blogTittle.innerText = text[0];
-        for(var i=1; i<text.length; i++)
-        {
-            var blogText = document.createElement("p");
-            blogText.innerText = "\t"+text[i];
-            backgroud.appendChild(blogText);
-        };
-        pageNum.innerText = "第" + page + "页";
-    };
-    for(var i=1; i<blogListLenght+1; i++)  // 每一页的按钮
-        buttons[i].onclick = function(){
-            buttonDown(this.id);
-        };
-    buttons[0].onclick = function(){  // 向左翻页
-        if(pageNow > 1)
-            buttonDown(pageNow-1);
-    };
-    buttons[buttons.length-1].onclick = function(){  // 向右翻页
-        if(pageNow < blogListLenght)
-            buttonDown(pageNow+1);
-    };
-};
+    // 页数显示
+    document.getElementById("pageNum").innerHTML = "第"+nowPage+"页";
+}

@@ -35,6 +35,7 @@
     background-color: rgb(255, 242, 224);
     border-radius: 30px;
     margin: 50px auto;
+    position: relative;
 }
 .page{
     font-size: 20px;
@@ -43,4 +44,18 @@
     color: black;
     background-color: rgb(125, 154, 248);
     border-radius: 30px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+}
+#now{
+    background-color: rgb(66, 101, 167);
+}
+.null{
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
 }
