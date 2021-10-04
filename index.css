@@ -6,44 +6,6 @@
 h1{
     font-size: 50px;
 }
-#buttons{
-    width: 700px;
-    height: 240px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-}
-#buttons *{
-    font-size: 35px;
-    width: 400px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 30px;
-    color: white;
-    background-color: rgb(183, 197, 243);
-    margin: auto;
-    user-select: none;
-}
-#buttons *:hover{
-    color: rgb(240, 240, 240);
-    background-color: rgb(165, 179, 230);
-}
-#buttons *:active{
-    color: rgb(211, 211, 211);
-    background-color: rgb(147, 162, 214);
-}
-#blogs{
-    top: 5px;
-    position: relative;
-}
-#code{
-    top: 10px;
-    position: relative;
-}
-#github{
-    top: 15px;
-    left: 100px;
-}
 #padding{
     width: 90%;
     padding: 5px;

@@ -1,0 +1,54 @@
+body{
+  background-color:rgb(150, 150, 150);
+}
+#back{
+  width: 200px;
+  height: 100px;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+}
+#button{
+  width:200px;
+  height:60px;
+  font-size:50px;
+  line-height:50px;
+  border:blue 5px solid;
+  background-color:rgb(150, 150, 150);
+  color:white;
+  user-select:none;
+  position: absolute;
+}
+#button:active{
+  border:red 5px solid;
+}
+.mask{
+  background-color:rgb(150, 150, 150);
+  width:10px;
+  height:5px;
+  transition:.3s;
+}
+#mask1{
+  left:20px;
+  top:-5px;
+  position:absolute;
+}
+#mask2{
+  right:20px;
+  bottom:-5px;
+  position:absolute;
+}
+#button:hover #mask1{
+  left:140px;
+}
+#button:hover #mask2{
+  right:140px;
+}
+#github{
+  border: none;
+  top: 70px;
+  left: 0px !important;
+}

@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./code.css">
     <link rel="stylesheet" href="/CSS/backButton.css">
     <link rel="stylesheet" href="/CSS/github.css">
+    <link rel="stylesheet" href="/CSS/buttons.css">
+    <script type="text/javascript" src="/JS/buttons.js"></script>
+    <script type="text/javascript" src="./code.js"></script>
 </head>
 <body>
     <button id="backButton" onclick="location.href = '/index.html'">Back</button>
@@ -15,8 +18,9 @@
         <h1>Jacken's Code</h1>
     </div>
     <div class="buttons">
-        <div class="nav" onclick="location.href = './nav/nav.html'">导航栏</div>
-        <div id="github" onclick="location.href = 'https://github.com/Jacken-Wu/Jacken-Wu.github.io/tree/main/code'">Jacken's GitHub</div>
+        <button class="buttons-opt" onclick="location.href = './nav/nav.html'">导航栏</button>
+        <button class="buttons-opt" onclick="location.href = './button/button.html'">按钮</button>
+        <button id="github" class="buttons-opt" onclick="location.href = 'https://github.com/Jacken-Wu/Jacken-Wu.github.io/tree/main/code'">Jacken's GitHub</button>
     </div>
 </body>
 </html>

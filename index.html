@@ -7,20 +7,22 @@
     <title>Jacken's Personal Webpage</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="/CSS/github.css">
+    <link rel="stylesheet" href="/CSS/buttons.css">
     <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" src="/JS/buttons.js"></script>
 </head>
 <body>
     <div id="tittle">
         <h1>Jacken's Personal Webpage</h1>
     </div>
-    <div id="buttons">
-        <div id="games" onclick="location.href = './games/games.html';">Jacken's Games</div>
-        <div id="blogs" onclick="location.href = './blog/blog.html'">Jacken's Blogs</div>
-        <div id="code" onclick="location.href = './code/code.html'">Jacken's Code</div>
-        <div id="github" onclick="location.href = 'https://github.com/Jacken-Wu/Jacken-Wu.github.io'">Jacken's GitHub</div>
+    <div class="buttons">
+        <button class="buttons-opt" onclick="location.href = './games/games.html';">Jacken's Games</button>
+        <button class="buttons-opt" onclick="location.href = './blog/blog.html'">Jacken's Blogs</button>
+        <button class="buttons-opt" onclick="location.href = './code/code.html'">Jacken's Code</button>
+        <button class="buttons-opt" id="github" onclick="location.href = 'https://github.com/Jacken-Wu/Jacken-Wu.github.io'">Jacken's GitHub</button>
     </div>
     <div id="padding">
-        <div id="lastBlog"></div>
+        <div id="lastBlog">inner</div>
     </div>
 </body>
 </html>

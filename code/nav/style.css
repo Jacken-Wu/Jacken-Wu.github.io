@@ -11,6 +11,7 @@ body{
     z-index: 1;
     text-align: center;
     position: absolute;
+    user-select: none;
 }
 #nav > input[type="radio"]{
     width: 0;
@@ -31,7 +32,7 @@ body{
 }
 #nav-item-1:checked ~ #tracker{
     width: 80px;
-    left: 3x;
+    left: 3px;
 }
 #nav-item-2:checked ~ #tracker{
     width: 55px;
@@ -42,7 +43,8 @@ body{
     left: 135px;
 }
 #back{
-    width: 240px;
+    width: 250px;
+    height: 80px;
     margin: auto;
     top: 45%;
     position: absolute;
@@ -51,6 +53,7 @@ body{
     text-align: center;
 }
 #github{
-    top: 70px;
-    margin: auto;
+    top: 50px;
+    left: 0 !important;
+    border: none;
 }
