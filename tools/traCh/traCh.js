@@ -41,7 +41,7 @@ window.onload = function () {
                 break;
             }
         }
-        if (n) {
+        if (n+1) {
             textBack.innerHTML = "<div class='text'><p>" + (n + 1) + ". " + chr_list[n] + "</p><img src='./data/" + chr_list[n][0] + ".png' alt='" + chr_list[n][0] + "'></div>";
         }else{
             textBack.innerHTML = "<div class='text'><p>Not Found</p></div>";
