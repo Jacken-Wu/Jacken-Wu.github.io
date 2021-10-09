@@ -1,0 +1,53 @@
+@media (max-width: 740px) {
+    #back{
+        width: 90%;
+    }
+}
+@media (min-width: 740px) {
+    #back{
+        width: 700px;
+    }
+}
+#back{
+    margin: auto;
+}
+#search-back{
+    width: 100%;
+    margin-top: 50px;
+}
+#search-text{
+    height: 30px;
+    font-size: 18px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+#search-start{
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
+    background-image: url(./search.gif);
+}
+#more-back{
+    width: 70px;
+    margin: auto;
+}
+#more{
+    width: 70px;
+    height: 30px;
+    font-size: 18px;
+}
+.text{
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+.text > p{
+    font-size: 20px;
+}
+.text > img{
+    height: 60px;
+    display: block;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
