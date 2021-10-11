@@ -2,10 +2,22 @@
     #back{
         width: 90%;
     }
+    .text{
+        height: 70px;
+    }
+    .text > img{
+        height: 60px;
+    }
 }
 @media (min-width: 740px) {
     #back{
         width: 700px;
+    }
+    .text{
+        height: 110px;
+    }
+    .text > img{
+        height: 100px;
     }
 }
 #back{
@@ -38,14 +50,12 @@
 }
 .text{
     width: 100%;
-    height: 70px;
     position: relative;
 }
 .text > p{
     font-size: 20px;
 }
 .text > img{
-    height: 60px;
     display: block;
     right: 0;
     top: 0;
