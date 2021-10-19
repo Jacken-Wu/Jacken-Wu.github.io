@@ -3,13 +3,16 @@ window.onload = function () {
     select.onclick = function () {
         music.click();
     };
+    var musicAdd = document.getElementById("add-music");
+    musicAdd.onclick = function () {
+        musicAd.click();
+    };
 
     var music = document.getElementById("up-music");
     var audio = document.getElementById("audio");
     var musicList = [];
     var musicLi = document.getElementById("music-li");
     var musicDel = document.getElementById("music-del");
-    var musicAdd = document.getElementById("music-add");
 
     function optionWrite() {
         let options = "";
@@ -20,13 +23,32 @@ window.onload = function () {
         musicDel.innerHTML = "<option value='-1'>-删除音乐-</option>" + options;
     };
 
-    music.onchange = function () {
+    music.onchange = () => {
+        musicList = []
         for (let i = 0; i < music.files.length; i++) {
             musicList.push(music.files[i]);
         };
         audio.src = URL.createObjectURL(musicList[0]);
         audio.volume = 0.1;
         optionWrite();
+    };
+    var musicAd = document.getElementById("ad-music");
+    musicAd.onchange = () => {
+        if (musicList.length == 0) {
+            musicAd.files = null;
+        } else {
+            let lastListLen = musicList.length;
+            for (let i = 0; i < musicAd.files.length; i++) {
+                musicList.push(musicAd.files[i]);
+            };
+            let options = "";
+            for (let i = lastListLen; i < musicList.length; i++) {
+                console.log(i, musicAd.files.length, musicList);
+                options += "<option value='" + i + "'>" + musicList[i]["name"] + "</option>";
+            };
+            musicLi.innerHTML += options;
+            musicDel.innerHTML += options;
+        };
     };
 
     var musicNum = 0;
@@ -44,8 +66,27 @@ window.onload = function () {
             audio.src = URL.createObjectURL(musicList[musicNum]);
         };
     };
-    audio.onended = () => {
-        next.click();
+    var mod = document.getElementById("music-mod");
+    audio.onended = () => {  // 播放模式
+        switch (mod.value) {
+            case "0":
+                next.click();
+                break;
+            case "1":
+                if (musicLi.value < musicList.length - 1) {
+                    next.click();
+                } else {
+                    musicLi.value = 0;
+                    audio.src = URL.createObjectURL(musicList[0]);
+                };
+                break;
+            case "2":
+                musicLi.value = Math.floor(Math.random() * musicList.length);
+                audio.src = URL.createObjectURL(musicList[musicLi.value]);
+                break;
+            case "3":
+                audio.play();
+        };
     };
     musicLi.onchange = () => {
         musicNum = musicLi.value;
