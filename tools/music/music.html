@@ -6,9 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <script src="./music.js"></script>
+    <link rel="stylesheet" href="./music.css">
 </head>
-<body>
-    <input type="file" id="up-music" multiple>
-    <audio src="" id="audio" controls></audio>
+<body style="background-color: rgb(255, 190, 190);">
+    <div class="back">
+        <input type="file" id="up-music" multiple style="display: none;">
+        <div class="up">
+            <button id="sel-music">选择音乐</button>
+            <button id="add-music">添加音乐</button>
+        </div>
+        <div class="music-li-back">
+            <select name="music-li" id="music-li">
+                <option value='-1'>-播放列表-</option>
+            </select>
+            <select name="music-del" id="music-del">
+                <option value='-1'>-删除音乐-</option>
+            </select>
+        </div>
+        <div class="control">
+            <button id="last">👆</button>
+            <button id="next">👇</button>
+        </div>
+        <audio src="" id="audio" controls autoplay></audio>
+    </div>
 </body>
 </html>

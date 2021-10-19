@@ -1,0 +1,71 @@
+.back{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 700px;
+    height: 320px;
+    background-color: rgb(160, 255, 255);
+    border-radius: 32px;
+    border: rgb(160, 255, 255) solid 5px;
+}
+#audio{
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+.up{
+    height: 262px;
+    width: 214px;
+    position: absolute;
+}
+#sel-music{
+    height: 130px;
+    width: 214px;
+    border-radius: 27px 0 0 0;
+    position: absolute;
+}
+#add-music{
+    height: 130px;
+    width: 214px;
+    border-radius: 0 0 0 27px;
+    bottom: 0;
+    position: absolute;
+}
+.music-li-back{
+    width: 256px;
+    height: 256px;
+    border: rgb(255, 200, 150) solid 3px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+}
+.music-li-back > *{
+    width: 100%;
+    height: 50%;
+}
+.control{
+    height: 262px;
+    width: 214px;
+    border-radius: 27px 0 0 27px;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+.control > *{
+    width: 214px;
+    height: 130px;
+    position: absolute;
+}
+#last{
+    border-radius: 0 27px 0 0;
+}
+#next{
+    border-radius: 0 0 27px 0;
+    bottom: 0;
+}
