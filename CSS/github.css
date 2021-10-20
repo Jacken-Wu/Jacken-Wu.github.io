@@ -3,19 +3,19 @@
     width: 200px;
     height: 30px;
     line-height: 30px;
-    border-radius: 30px;
+    border-radius: 3px;
     left: 50px;
     text-align: center;
-    color: rgb(226, 226, 226);
-    background-color: rgb(107, 103, 96);
+    color: rgb(85, 85, 85);
+    background-color: rgb(107, 103, 96, 0.5);
     position: relative;
     user-select: none;
 }
 #github:hover{
-    color: rgb(212, 212, 212);
-    background-color: rgb(95, 89, 80);
+    color: rgb(65, 65, 65);
+    background-color: rgb(95, 89, 80, 0.5);
 }
 #github:active{
-    color: rgb(168, 168, 168);
-    background-color: rgb(80, 74, 65);
+    color: rgb(45, 45, 45);
+    background-color: rgb(80, 74, 65, 0.5);
 }

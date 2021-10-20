@@ -1,3 +1,6 @@
+html, body{
+    margin: 0;
+}
 #tittle{
     width: 100%;
     margin: 50px auto;
@@ -6,12 +9,21 @@
 h1{
     font-size: 60px;
 }
+@media (max-width: 1350px) {
+    #padding{
+        width: 90%;
+    }
+}
+@media (min-width: 1350px) {
+    #padding{
+        width: 1000px;
+    }
+}
 #padding{
-    width: 90%;
     padding: 5px;
     margin: 0 auto;
-    background-color: rgb(255, 240, 210);
-    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
 }
 #lastBlog{
     width: 90%;
@@ -26,4 +38,28 @@ h2{
 }
 .buttons{
     height: 300px;
+}
+.top-block{
+    height: 35px;
+    background: linear-gradient(to bottom, rgb(255, 255, 255, 0.5), rgb(255, 255, 255, 0.35) 50%, rgb(255, 255, 255, 0));
+    transition: .3s;
+}
+#github{
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    top: 5px;
+    right: 5px;
+    background-image: url(./image/head.jpg);
+    background-size: cover;
+    position: absolute;
+    transition: .3s;
+}
+.top-block:hover{
+    height: 70px;
+}
+.top-block:hover > #github{
+    width: 64px;
+    height: 64px;
+    right: 30px;
 }

@@ -9,17 +9,17 @@
     width: 300px;
     height: 60px;
     line-height: 60px;
-    border-radius: 30px;
-    color: white;
-    background-color: rgb(183, 197, 243);
+    border-radius: 3px;
+    color: rgb(85, 85, 85);
+    background-color: rgb(183, 197, 243, 0.5);
     position: relative;
     border: none;
 }
 .buttons *:hover{
-    color: rgb(240, 240, 240);
-    background-color: rgb(165, 179, 230);
+    color: rgb(65, 65, 65);
+    background-color: rgb(165, 179, 230, 0.5);
 }
 .buttons *:active{
-    color: rgb(211, 211, 211);
-    background-color: rgb(147, 162, 214);
+    color: rgb(45, 45, 45);
+    background-color: rgb(147, 162, 214, 0.5);
 }

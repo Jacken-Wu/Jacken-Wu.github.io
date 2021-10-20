@@ -5,7 +5,7 @@
     background-color: rgb(233, 233, 233);
     top: 5px;
     position: absolute;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 #backButton:hover{
     background-color: rgb(220, 220, 220);
