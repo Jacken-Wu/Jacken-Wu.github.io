@@ -13,6 +13,7 @@ window.onload = function () {
     var musicList = [];
     var musicLi = document.getElementById("music-li");
     var musicDel = document.getElementById("music-del");
+    var title = document.getElementsByTagName("title")[0];
 
     function optionWrite() {
         let options = "";
@@ -22,13 +23,17 @@ window.onload = function () {
         musicLi.innerHTML = options;
         musicDel.innerHTML = "<option value='-1'>-删除音乐-</option>" + options;
     };
+    function musicUpdate (musicObject) {
+        audio.src = URL.createObjectURL(musicObject);
+        title.innerText = musicObject['name'];
+    };
 
     music.onchange = () => {
         musicList = []
         for (let i = 0; i < music.files.length; i++) {
             musicList.push(music.files[i]);
         };
-        audio.src = URL.createObjectURL(musicList[0]);
+        musicUpdate(musicList[0]);
         audio.volume = 0.1;
         optionWrite();
     };
@@ -51,19 +56,18 @@ window.onload = function () {
         };
     };
 
-    var musicNum = 0;
     var last = document.getElementById("last");
     var next = document.getElementById("next");
     last.onclick = () => {
-        if (0 < musicNum && musicNum < musicList.length) {
-            musicLi.value = --musicNum;
-            audio.src = URL.createObjectURL(musicList[musicNum]);
+        if (0 < musicLi.value && musicLi.value < musicList.length) {
+            --musicLi.value;
+            musicUpdate(musicList[musicLi.value]);
         };
     };
     next.onclick = () => {
-        if (0 <= musicNum && musicNum < musicList.length - 1) {
-            musicLi.value = ++musicNum;
-            audio.src = URL.createObjectURL(musicList[musicNum]);
+        if (0 <= musicLi.value && musicLi.value < musicList.length - 1) {
+            ++musicLi.value;
+            musicUpdate(musicList[musicLi.value]);
         };
     };
     var mod = document.getElementById("music-mod");
@@ -77,20 +81,19 @@ window.onload = function () {
                     next.click();
                 } else {
                     musicLi.value = 0;
-                    audio.src = URL.createObjectURL(musicList[0]);
+                    musicUpdate(musicList[0]);
                 };
                 break;
             case "2":
                 musicLi.value = Math.floor(Math.random() * musicList.length);
-                audio.src = URL.createObjectURL(musicList[musicLi.value]);
+                musicUpdate(musicList[musicLi.value]);
                 break;
             case "3":
                 audio.play();
         };
     };
     musicLi.onchange = () => {
-        musicNum = musicLi.value;
-        audio.src = URL.createObjectURL(musicList[musicLi.value]);
+        musicUpdate(musicList[musicLi.value]);
     };
     musicDel.onchange = () => {
         let musicDeleted = musicDel.value;
@@ -100,10 +103,10 @@ window.onload = function () {
         musicLi.value = musicNow;
         if (musicNow == musicDeleted) {
             if (musicDeleted < musicList.length) {
-                audio.src = URL.createObjectURL(musicList[musicNow]);
+                musicUpdate(musicList[musicNow]);
             } else if (musicDeleted > 0) {
                 musicLi.value = --musicNow;
-                audio.src = URL.createObjectURL(musicList[musicNow]);
+                musicUpdate(musicList[musicNow]);
             } else {
                 musicLi.innerHTML = "<option value='-1'>-播放列表-</option>";
                 audio.src = "";
