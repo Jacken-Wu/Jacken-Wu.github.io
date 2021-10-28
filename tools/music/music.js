@@ -65,9 +65,9 @@ window.onload = function () {
     var playPause = document.getElementById("play-pause");
     var style = document.getElementById("play-button");
     playPause.onclick = () => {
-        if (audio.currentTime == audio.duration) {
+        if (audio.currentTime == audio.duration && audio.paused) {
             musicUpdate(musicList[musicLi.value]);
-            style.innerText = ".process-frame:hover #play-pause{background: url(./play.gif) center center;}"
+            style.innerText = ".process-frame:hover #play-pause{background: url(./pause.gif) center center;}"
         } else if (audio.paused) {
             audio.play();
             let leftTime = audio.duration - audio.currentTime;  // 剩余的时间
