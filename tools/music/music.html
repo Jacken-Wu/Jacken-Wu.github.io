@@ -9,36 +9,46 @@
     <link rel="stylesheet" href="./music.css">
     <link rel="stylesheet" href="/CSS/backButton.css">
     <link rel="icon" href="./mikumiku.ico">
+    <style id="play-button">
+        .process-frame:hover #play-pause{
+            background: url(./pause.gif) center center;
+        }
+    </style>
 </head>
-<body style="background-color: rgb(255, 190, 190);">
+<body>
     <button id="backButton" onclick="location.href='../tools.html'">Back</button>
-    <div class="back">
-        <input type="file" id="up-music" multiple style="display: none;">
-        <input type="file" id="ad-music" multiple style="display: none;">
-        <div class="up">
-            <button id="sel-music">选择音乐</button>
-            <button id="add-music">添加音乐</button>
-        </div>
-        <div class="music-li-back">
-            <select name="music-li" id="music-li">
-                <option value='-1'>-播放列表-</option>
-            </select>
-            <select name="music-del" id="music-del">
-                <option value='-1'>-删除音乐-</option>
-            </select>
-            <select name="music-mod" id="music-mod">
-                <option value="0">顺序播放</option>
-                <option value="1">列表循环</option>
-                <option value="2">随机播放</option>
-                <option value="3">单曲循环</option>
-                <option value="4">播完暂停</option>
-            </select>
-        </div>
+    <input type="file" id="up-music" multiple style="display: none;">
+    <input type="file" id="ad-music" multiple style="display: none;">
+    <div class="up">
+        <button id="sel-music">选择音乐</button>
+        <button id="add-music">添加音乐</button>
+    </div>
+    <div class="music-li-back">
+        <select name="music-li" id="music-li">
+            <option value='-1'>-播放列表-</option>
+        </select>
+        <select name="music-del" id="music-del">
+            <option value='-1'>-删除音乐-</option>
+        </select>
+        <select name="music-mod" id="music-mod">
+            <option value="0">顺序播放</option>
+            <option value="1">列表循环</option>
+            <option value="2">随机播放</option>
+            <option value="3">单曲循环</option>
+            <option value="4">播完暂停</option>
+        </select>
+    </div>
+    <audio src="" id="audio" controls autoplay style="display: none;"></audio>
+    <div class="process-frame">
         <div class="control">
-            <button id="last">👆</button>
-            <button id="next">👇</button>
+            <button id="last"></button>
+            <button id="play-pause"></button>
+            <button id="next"></button>
         </div>
-        <audio src="" id="audio" controls autoplay></audio>
+        <div id="process-bar-back">
+            <div id="process-bar-body"></div>
+            <div id="process-bar-head"></div>
+        </div>
     </div>
 </body>
 </html>
