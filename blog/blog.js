@@ -1,5 +1,5 @@
 window.onload = function () {
-    var maxPage = 10;  // 最大页数
+    var maxPage = 11;  // 最大页数
     var nowPage = location.href.split("=")[1] ? parseInt(location.href.split("=")[1]) : 1;  // 当前页数
 
     // 博客内容
