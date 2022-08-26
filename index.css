@@ -37,7 +37,8 @@ h2{
     font-size: 18px;
 }
 .buttons{
-    height: 300px;
+    height: 340px;
+    background-color: rgba(219, 219, 219, 0.377);
 }
 .top-block{
     height: 35px;

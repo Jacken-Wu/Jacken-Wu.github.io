@@ -1,0 +1,65 @@
+#direction{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+#direction > h1{
+    font-size: 30px;
+}
+#direction > p{
+    font-size: 20px;
+}
+
+#main{
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    position: relative;
+}
+nav > button{
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: rgb(210, 193, 255);
+    border-radius: 7px;
+}
+#show{
+    height: 560px;
+}
+#show-window{
+    width: 100%;
+    height: 100%;
+}
+@media (min-width: 700px) {
+    nav{
+        width: 20%;
+        height: 460px;
+        overflow-y: auto;
+    }
+    nav > button{
+        width: 100%;
+        display: block;
+    }
+    #show{
+        width: 80%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+@media (max-width: 700px) {
+    nav{
+        width: 100%;
+        height: 40px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    nav > button{
+        width: 100px;
+        display: inline-block;
+    }
+    #show{
+        width: 100%;
+        top: 40px;
+    }
+}

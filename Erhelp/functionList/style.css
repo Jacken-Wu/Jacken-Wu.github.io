@@ -1,0 +1,28 @@
+body{
+    background-color: rgba(240, 248, 255, 0.575);
+}
+#direction{
+    width: 100%;
+    text-align: center;
+}
+#direction > h1{
+    font-size: 25px;
+}
+#direction > p{
+    font-size: 18px;
+}
+.example{
+    display: block;
+    margin: auto;
+    padding: 5px;
+}
+@media (min-width: 700px) {
+    .example{
+        width: 400px;
+    }
+}
+@media (max-width: 700px) {
+    .example{
+        width: 90%;
+    }
+}
