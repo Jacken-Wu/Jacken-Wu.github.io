@@ -2,7 +2,7 @@ window.onload = function(){
     buttonsTop();
 
     var blog = new XMLHttpRequest();
-    blog.open("Get", "./blog/blogs/11.txt", false);
+    blog.open("Get", "./blog/blogs/12.txt", false);
     blog.send(null);
     var text = blog.responseText.split("\n");
     var textinner = "<h2>"+text[0]+"</h2>";

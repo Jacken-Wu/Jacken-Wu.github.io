@@ -39,3 +39,11 @@ document.getElementById("pack").onclick = () => {
 document.getElementById("rename").onclick = () => {
     showWindow.src = "./functionList/rename";
 }
+document.getElementById("ertrans").onclick = () => {
+    showWindow.src = "./functionList/ertrans";
+}
+document.getElementById("respond").onclick = () => {
+    showWindow.src = "./functionList/respond";
+}
+
+
