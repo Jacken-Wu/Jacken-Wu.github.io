@@ -45,5 +45,8 @@ document.getElementById("ertrans").onclick = () => {
 document.getElementById("respond").onclick = () => {
     showWindow.src = "./functionList/respond";
 }
+document.getElementById("chat").onclick = () => {
+    showWindow.src = "./functionList/chat";
+}
 
 
