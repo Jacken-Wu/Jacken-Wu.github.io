@@ -48,5 +48,6 @@ document.getElementById("respond").onclick = () => {
 document.getElementById("chat").onclick = () => {
     showWindow.src = "./functionList/chat";
 }
-
-
+document.getElementById("private").onclick = () => {
+    showWindow.src = "./functionList/private";
+}

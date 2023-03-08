@@ -8,6 +8,9 @@ body{
 #direction > h1{
     font-size: 25px;
 }
+#direction > h2{
+    font-size: 22px;
+}
 #direction > p{
     font-size: 18px;
 }
