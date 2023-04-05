@@ -15,14 +15,8 @@ document.getElementById("add-song").onclick = () => {
 document.getElementById("errand").onclick = () => {
     showWindow.src = "./functionList/errand";
 }
-document.getElementById("add-food").onclick = () => {
-    showWindow.src = "./functionList/addFood";
-}
-document.getElementById("del-food").onclick = () => {
-    showWindow.src = "./functionList/delFood";
-}
-document.getElementById("food").onclick = () => {
-    showWindow.src = "./functionList/food";
+document.getElementById("erfood").onclick = () => {
+    showWindow.src = "./functionList/erfood";
 }
 document.getElementById("erlove").onclick = () => {
     showWindow.src = "./functionList/erlove";
