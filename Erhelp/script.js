@@ -45,3 +45,6 @@ document.getElementById("chat").onclick = () => {
 document.getElementById("private").onclick = () => {
     showWindow.src = "./functionList/private";
 }
+document.getElementById("weather").onclick = () => {
+    showWindow.src = "./functionList/weather";
+}
